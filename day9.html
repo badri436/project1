@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="p1">
+        <p id="p2">Hello this is from HTML</p>
+        <p id="p3"></p>
+        <input id="inp1"/>
+        <button onclick="showElement()">show element</button>
+    </div>
+
+    <div class="p6">
+        <button>Submit</button>
+    </div>
+
+    <div class="p6">
+        <p>This was second class div</p>
+
+    </div>
+
+    <script>
+        function showElement(){
+            let arr1=document.getElementsByClassName("p6")
+        let newPtag1=document.createElement("p")
+        newPtag1.innerHTML="this is newly created"
+        arr1[1].appendChild(newPtag1)
+        console.log(arr1)
+        }
+        console.log("hii")
+        // DOM
+        let name=document.getElementById("p2").textContent
+        console.log(name)
+        document.getElementById("p3").innerHTML="this is coming from javascript"
+        let newPtag=document.createElement("p")
+        newPtag.innerHTML="this is newly created"
+        document.getElementById("p1").appendChild(newPtag)
+        document.getElementById("inp1").placeholder="enter your name"
+        document.getElementById("inp1").style.width="300px"
+        
+        // BOM
+        // screen,navigator,history,alert,confirm,prompt,location
+        console.log(window.screen.width)
+        console.log(window.screen.height)
+
+        console.log(navigator.cookieEnabled)
+
+        console.log(window.location.href)
+
+        console.log(window.location.protocol)
+        // alert("Invalid user")
+        let flag=confirm("Is you are a admin")
+        console.log(flag)
+        let word=prompt("Enter your name")
+        console.log(word)
+        window.localStorage.setItem("id",word)
+        console.log(window.localStorage.getItem("id"))
+        setTimeout(()=>{
+            console.log("this is timeout")
+        },10000)
+
+        setInterval(()=>{
+            console.log("this is intervaal")
+        },3000)
+    </script>
+</body>
+</html>
