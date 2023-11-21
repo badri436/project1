@@ -44,7 +44,7 @@ function addAndSub1(a) {
     console.log(a+8*14)
 }
 addAndSub1(15)
-addAndSub1(8)
+// addAndSub1(8)
 
 // Arrow function 
 let newFunction = () => {
